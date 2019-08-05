@@ -15,7 +15,7 @@ public class PhoneNumbers {
         while ((line = in.readLine()) != null) {
             boolean done = false;
             char[] input = line.toCharArray();
-            int[] lastCombo = {0,0,0,0,0,0,0};
+            int[] lastCombo = new int[input.length];
             Set<String> finalResponse = new TreeSet<String>();
             while(true) {
                 finalResponse.add(addLastComboToResults(input, lastCombo));
@@ -41,7 +41,7 @@ public class PhoneNumbers {
     }
 
     private static String addLastComboToResults(char[] in, int[] combination) {
-        char[] word = new char[7];
+        char[] word = new char[in.length];
         for(int i = 0; i < in.length; i++){
             word[i] = getMapper().get(in[i]).get(combination[i]);
         }
