@@ -62,7 +62,9 @@ public class SmileyFaces {
 
     private static String simplifyInput(String in) {
         String temp;
-        temp = in.replaceAll(":\\)", "H");
+        temp = in.replaceAll("H", "");
+        temp = temp.replaceAll("S", "");
+        temp = temp.replaceAll(":\\)", "H");
         temp = temp.replaceAll(":\\(", "S");
         Pattern p = Pattern.compile("[^()HS]{1}");
         return p.splitAsStream(temp).collect(Collectors.joining());
