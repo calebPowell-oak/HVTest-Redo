@@ -4,7 +4,6 @@ package test;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.ParameterizedType;
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
